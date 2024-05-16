@@ -4,6 +4,9 @@
       "path": "app1"
     },
     {
+      "path": "app1.PerformanceTest"
+    },
+    {
       "path": ".AL-Go"
     }
   ],
