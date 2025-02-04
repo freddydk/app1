@@ -2,8 +2,5 @@
   "country": "us",
   "appFolders": [],
   "testFolders": [],
-  "bcptTestFolders": [],
-  "installTestLibraries": true,
-  "installTestApps": [ ":C:\\Applications.US\\Microsoft_Tests-ERM_*.app" ],
-  "installOnlyReferencedApps": false
+  "bcptTestFolders": []
 }
