@@ -2,6 +2,5 @@
   "country": "us",
   "appFolders": [],
   "testFolders": [],
-  "bcptTestFolders": [],
-  "memorylimit": "16G"
+  "bcptTestFolders": []
 }
