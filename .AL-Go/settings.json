@@ -3,5 +3,6 @@
   "appFolders": [],
   "testFolders": [],
   "bcptTestFolders": [],
-  "installApps": [ "https://www.dropbox.com/scl/fi/jd679ufyternqztazvdzb/bcsamples-bingmaps.pte-main-Apps-24.0.169.0.zip?rlkey=${{SECRETNAME}}&dl=1" ]
+  "installApps": [ "https://www.dropbox.com/${{SECRETNAME}}&dl=1" ]
+  
 }
