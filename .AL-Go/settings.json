@@ -3,6 +3,5 @@
   "appFolders": [],
   "testFolders": [],
   "bcptTestFolders": [],
-  "installApps": [ "https://www.dropbox.com/${{SECRETNAME}}&dl=1" ]
-  
+  "useCompilerFolder": true
 }
