@@ -41,7 +41,7 @@ jobs:
     runs-on: [ windows-latest ]
     steps:
       - name: Dump Workflow Information
-        uses: freddydk/AL-Go/Actions/DumpWorkflowInfo@workshopfeedback
+        uses: freddydk/AL-Go/Actions/DumpWorkflowInfo@issue1440
         with:
           shell: powershell
 
@@ -50,18 +50,18 @@ jobs:
 
       - name: Initialize the workflow
         id: init
-        uses: freddydk/AL-Go/Actions/WorkflowInitialize@workshopfeedback
+        uses: freddydk/AL-Go/Actions/WorkflowInitialize@issue1440
         with:
           shell: powershell
 
       - name: Read settings
-        uses: freddydk/AL-Go/Actions/ReadSettings@workshopfeedback
+        uses: freddydk/AL-Go/Actions/ReadSettings@issue1440
         with:
           shell: powershell
 
       - name: Read secrets
         id: ReadSecrets
-        uses: freddydk/AL-Go/Actions/ReadSecrets@workshopfeedback
+        uses: freddydk/AL-Go/Actions/ReadSecrets@issue1440
         with:
           shell: powershell
           gitHubSecrets: ${{ toJson(secrets) }}
@@ -69,7 +69,7 @@ jobs:
           useGhTokenWorkflowForPush: '${{ github.event.inputs.useGhTokenWorkflow }}'
 
       - name: Add existing app
-        uses: freddydk/AL-Go/Actions/AddExistingApp@workshopfeedback
+        uses: freddydk/AL-Go/Actions/AddExistingApp@issue1440
         with:
           shell: powershell
           token: ${{ steps.ReadSecrets.outputs.TokenForPush }}
@@ -79,7 +79,7 @@ jobs:
 
       - name: Finalize the workflow
         if: always()
-        uses: freddydk/AL-Go/Actions/WorkflowPostProcess@workshopfeedback
+        uses: freddydk/AL-Go/Actions/WorkflowPostProcess@issue1440
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:

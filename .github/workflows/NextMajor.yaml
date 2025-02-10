@@ -30,7 +30,7 @@ jobs:
       telemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
     steps:
       - name: Dump Workflow Information
-        uses: freddydk/AL-Go/Actions/DumpWorkflowInfo@workshopfeedback
+        uses: freddydk/AL-Go/Actions/DumpWorkflowInfo@issue1440
         with:
           shell: powershell
 
@@ -41,13 +41,13 @@ jobs:
 
       - name: Initialize the workflow
         id: init
-        uses: freddydk/AL-Go/Actions/WorkflowInitialize@workshopfeedback
+        uses: freddydk/AL-Go/Actions/WorkflowInitialize@issue1440
         with:
           shell: powershell
 
       - name: Read settings
         id: ReadSettings
-        uses: freddydk/AL-Go/Actions/ReadSettings@workshopfeedback
+        uses: freddydk/AL-Go/Actions/ReadSettings@issue1440
         with:
           shell: powershell
           get: useGitSubmodules,shortLivedArtifactsRetentionDays
@@ -55,7 +55,7 @@ jobs:
       - name: Read submodules token
         id: ReadSubmodulesToken
         if: env.useGitSubmodules != 'false' && env.useGitSubmodules != ''
-        uses: freddydk/AL-Go/Actions/ReadSecrets@workshopfeedback
+        uses: freddydk/AL-Go/Actions/ReadSecrets@issue1440
         with:
           shell: powershell
           gitHubSecrets: ${{ toJson(secrets) }}
@@ -77,7 +77,7 @@ jobs:
 
       - name: Determine Projects To Build
         id: determineProjectsToBuild
-        uses: freddydk/AL-Go/Actions/DetermineProjectsToBuild@workshopfeedback
+        uses: freddydk/AL-Go/Actions/DetermineProjectsToBuild@issue1440
         with:
           shell: powershell
           maxBuildDepth: ${{ env.workflowDepth }}
@@ -113,7 +113,7 @@ jobs:
 
       - name: Finalize the workflow
         id: PostProcess
-        uses: freddydk/AL-Go/Actions/WorkflowPostProcess@workshopfeedback
+        uses: freddydk/AL-Go/Actions/WorkflowPostProcess@issue1440
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:

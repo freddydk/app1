@@ -30,18 +30,18 @@ jobs:
 
       - name: Initialize the workflow
         id: init
-        uses: freddydk/AL-Go/Actions/WorkflowInitialize@workshopfeedback
+        uses: freddydk/AL-Go/Actions/WorkflowInitialize@issue1440
         with:
           shell: powershell
 
       - name: Read settings
-        uses: freddydk/AL-Go/Actions/ReadSettings@workshopfeedback
+        uses: freddydk/AL-Go/Actions/ReadSettings@issue1440
         with:
           shell: powershell
 
       - name: Determine Deployment Environments
         id: DetermineDeploymentEnvironments
-        uses: freddydk/AL-Go/Actions/DetermineDeploymentEnvironments@workshopfeedback
+        uses: freddydk/AL-Go/Actions/DetermineDeploymentEnvironments@issue1440
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
@@ -54,7 +54,7 @@ jobs:
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
       - name: Build Reference Documentation
-        uses: freddydk/AL-Go/Actions/BuildReferenceDocumentation@workshopfeedback
+        uses: freddydk/AL-Go/Actions/BuildReferenceDocumentation@issue1440
         with:
           shell: powershell
           artifacts: 'latest'
@@ -71,7 +71,7 @@ jobs:
 
       - name: Finalize the workflow
         if: always()
-        uses: freddydk/AL-Go/Actions/WorkflowPostProcess@workshopfeedback
+        uses: freddydk/AL-Go/Actions/WorkflowPostProcess@issue1440
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
