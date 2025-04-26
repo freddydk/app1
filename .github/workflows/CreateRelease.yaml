@@ -224,6 +224,12 @@ jobs:
         with:
           github-token: ${{ steps.ReadSecrets.outputs.TokenForPush }}
           script: |
+            await github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/tags/${{ github.event.inputs.tag }}`,
+              sha: '${{ steps.analyzeartifacts.outputs.commitish }}'
+            })
             var bodyMD = process.env.bodyMD
             const createReleaseResponse = await github.rest.repos.createRelease({
               owner: context.repo.owner,
