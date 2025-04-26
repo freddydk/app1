@@ -227,7 +227,7 @@ jobs:
             await github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: `refs/tags/${{ github.event.inputs.tag }}`,
+              ref: 'refs/tags/${{ github.event.inputs.tag }}',
               sha: '${{ steps.analyzeartifacts.outputs.commitish }}'
             })
             var bodyMD = process.env.bodyMD
