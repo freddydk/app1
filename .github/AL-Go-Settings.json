@@ -1,7 +1,7 @@
 {
   "type": "PTE",
   "templateUrl": "https://github.com/freddydk/AL-Go@issue1685",
-  "templateSha": "d4f418d00b1deedb88d77be2b49c520051a66511",
+  "templateSha": "34e81c756609e7b562ed9518327f8fdeb723d37c",
   "conditionalSettings": [
     {
       "workflows": [
