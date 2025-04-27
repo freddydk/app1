@@ -3,5 +3,6 @@
   "appFolders": [],
   "testFolders": [],
   "bcptTestFolders": [],
-  "useCompilerFolder": true
+  "useCompilerFolder": true,
+  "repoVersion": "2.0"
 }
