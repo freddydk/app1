@@ -2,7 +2,7 @@
   "id": "7f45272b-d3ed-417e-95e7-2b132afc0511",
   "name": "App1.Test",
   "publisher": "Freddy A/S",
-  "version": "2.0.0.0",
+  "version": "3.0.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -27,7 +27,7 @@
       "id": "2e09c6db-eca9-41f0-823b-9bdff26295f6",
       "name": "app1",
       "publisher": "Freddy A/S",
-      "version": "2.0.0.0"
+      "version": "3.0.0.0"
     }
   ],
   "screenshots": [],
